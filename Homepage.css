@@ -454,4 +454,9 @@
       letter-spacing: 1px !important;
       padding-right: 70px !important;
     }
+    .custom-tooltip:hover::after{
+      opacity: 0;
+      visibility: hidden;
+    }
+    
   }
