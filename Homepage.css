@@ -417,7 +417,8 @@
     }
     .tools{
       order: 2;
-      width: 400px;
+      width: 100%;
+      gap: 20px;
     }
     #password-output{
       font-size:0.85rem !important;
