@@ -357,13 +357,16 @@
     align-items: center;
   }
   @media (max-width: 768px){
+    body{
+      padding-bottom: 180px;
+    }
     .calcHome{
       order: 2;
       width: 90%;
       min-height: auto;
       padding-bottom: 30px;
-      margin: 3px auto;
-      padding-top: 60px;
+      margin: 0px auto;
+      padding-top: 50px;
     }
     .left-column{
       display: contents;
@@ -386,7 +389,7 @@
     .homepage-article{
       order: 4;
       max-width: 100%;
-      margin: 20px auto 50px auto;
+      margin: 20px auto 0px auto;
     }
     .legal-container{
       padding: 20px;

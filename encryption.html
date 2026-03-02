@@ -31,6 +31,10 @@
 
           <div class="radio-container" style="flex-wrap: wrap;">
             <div class="radio-option">
+              <input type="checkbox" id="inc-uppercase" checked>
+              <label for="inc-uppercase">ABC</label>
+            </div>
+            <div class="radio-option">
               <input type="checkbox" id="inc-numbers" checked>
               <label for="inc-numbers">123</label>
             </div>
@@ -39,7 +43,7 @@
                 <label for="inc-symbols">!@$</label>
               </div>
           </div>
-            <button class="input-style" style="margin-top: 20px; font-weight: bold; letter-spacing: 1px; color: var(--neon-blue);">Synthesize</button>
+            <button onclick="generateKey();" class="input-style" style="margin-top: 20px; font-weight: bold; letter-spacing: 1px; color: var(--neon-blue);">Synthesize</button>
         </div>
       </div> 
     </div>
