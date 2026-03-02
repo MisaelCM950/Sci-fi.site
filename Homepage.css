@@ -298,7 +298,7 @@
   .tools{
     display: flex;
     flex-direction: row;
-    width: 500px;
+    width: 450px;
     height: auto;
     background-color: rgba(10, 25, 47, 0.9);;
     justify-content: center;
@@ -362,8 +362,8 @@
       width: 90%;
       min-height: auto;
       padding-bottom: 30px;
-      margin: 0 auto;
-      padding-top: 50px;
+      margin: 3px auto;
+      padding-top: 60px;
     }
     .left-column{
       display: contents;
