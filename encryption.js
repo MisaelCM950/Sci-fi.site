@@ -45,7 +45,7 @@ copyIcon.addEventListener("click", () =>{
     if(passwordOutput.value !== "" && passwordOutput.value !== "COPIED TO CLIPBOARD !"){
         navigator.clipboard.writeText(passwordOutput.value);
         let savedPassword = passwordOutput.value;
-        passwordOutput.value = "COPIED TO CLIPBOARD !";
+        passwordOutput.value = "COPIED TO CLIPBOARD!";
 
     
     setTimeout(function() {

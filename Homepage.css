@@ -417,9 +417,10 @@
     }
     .tools{
       order: 2;
+      width: 400px;
     }
     #password-output{
       font-size:0.85rem !important;
-      letter-spacing: 1px;
+      letter-spacing: 1px !important;
     }
   }
