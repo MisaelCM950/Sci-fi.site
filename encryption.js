@@ -2,7 +2,7 @@ const lengthSlider = document.getElementById('password-length');
 const lengthDisplay = document.getElementById('length-display');
 
 lengthSlider.addEventListener("input", function(){
-    lengthDisplay.textContent = lenghtSlider.value;
+    lengthDisplay.textContent = lengthSlider.value;
 })
 
 function generateKey(){
@@ -36,4 +36,24 @@ for(let i = 0; i < passwordLength; i++){
 
 document.getElementById('password-output').value = finalKey;
 }
+
+const passwordOutput = document.getElementById('password-output');
+
+const copyIcon = document.getElementById('Copy-to-clipboard');
+
+copyIcon.addEventListener("click", () =>{
+    if(passwordOutput.value !== "" && passwordOutput.value !== "COPIED TO CLIPBOARD !"){
+        navigator.clipboard.writeText(passwordOutput.value);
+        let savedPassword = passwordOutput.value;
+        passwordOutput.value = "COPIED TO CLIPBOARD !";
+
+    
+    setTimeout(function() {
+        passwordOutput.value = savedPassword;
+    }, 1500)
+    }
+});
+
+
+
 

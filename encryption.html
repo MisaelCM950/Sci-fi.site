@@ -20,9 +20,10 @@
           <img src="Password Generator.png" style="width: 150px; margin: 0; margin-top: -50px;" alt="Encryption Icon">
 
           <h2 style="color: var(--neon-blue); text-transform: uppercase; margin-bottom: 0;">Quantum Key</h2>
-
-          <input type="text" class="input-style" id="password-output" placeholder="Awaiting Synthesis" readonly style="text-align: center; font-size: 1.12rem; letter-spacing: 2px;">
-
+          <div style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center;">
+            <input type="text" class="input-style" id="password-output" placeholder="Awaiting Synthesis" readonly style="text-align: center; font-size: 1.12rem; letter-spacing: 2px; padding-right: 40px; box-sizing: border-box;"> 
+            <img id="Copy-to-clipboard" src="Copy-to-clipboard.png" style="cursor: pointer; position: absolute; right: 55px; width: 50px;" alt="Copy">
+          </div>
           <label for="" style="margin-top: 20px;">Key Complexity:  <span id="length-display">16</span> </label>
 
           <input type="range" id="password-length" min="8" max="64" value="16" style="width: 80%; cursor: pointer;" >
