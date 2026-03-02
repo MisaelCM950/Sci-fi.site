@@ -45,6 +45,9 @@
     min-height: 900px;
     padding-bottom: 50px;
     padding-top: 30px;
+
+    -webkit-transform: translateZ(0);
+    transform:translateZ(0);
   }
   label{
     text-align: left;
@@ -414,5 +417,9 @@
     }
     .tools{
       order: 2;
+    }
+    #password-output{
+      font-size:0.85rem !important;
+      letter-spacing: 1px;
     }
   }
