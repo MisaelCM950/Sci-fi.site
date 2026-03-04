@@ -11,18 +11,18 @@
     <title>Misa - Sci-Fi</title>
 </head>
 <body>
-    <div class="chat-window">
+    <div class="chat-window" id="chat-window">
         <div class="message misa-message">
-            System Online. Awaiting input....ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            System Online. Awaiting input....
         </div>
         <div class="message user-message">
             Hello Misa.
         </div>
     </div>
     <div class="layout-Misa">
-        <div style="position: relative; width: 50%; display: flex; align-items: center;">
+        <div style="position: relative; width: 90%; display: flex; align-items: center; max-width: 1400px;">
             <input id="message" type="text" class="input-style" placeholder="Message Misa...">
-            <img src="Send Icon.png" alt=" "style="position: absolute; right: 10px; bottom: 0px;cursor: pointer; width: 50px;" alt="message">
+            <img id="send-btn"src="Send Icon.png" alt=" "style="position: absolute; right: 10px; bottom: 0px;cursor: pointer; width: 50px;" alt="message">
         </div>
 
     </div>
@@ -37,5 +37,6 @@
       </div>
       <p class="copyright">@2026 Sci-Fi.site. All rights reserved</p>
     </footer>
+    <script src="Misa.js"></script>
 </body>
 </html>
