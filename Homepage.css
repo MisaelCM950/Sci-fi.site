@@ -359,6 +359,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+  }
+  .tools{
+    width: 100%;
   }
   .custom-tooltip::after{
     content: attr(data-tooltip);
