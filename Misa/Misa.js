@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () =>{
 const sendBtn = document.getElementById('send-btn');
 const chatWindow = document.getElementById('chat-window');
 const messageInput = document.getElementById('message');
-const messageSound = new Audio('Loading-Robot.mp3')
+const messageSound = new Audio('Loading Robot.mp3')
 
 async function sendMessage(){
     let text = messageInput.value.trim();
