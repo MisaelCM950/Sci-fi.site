@@ -44,7 +44,8 @@ async function sendMessage(){
        if (data.choices && data.choices[0]) {
             misaBubble.textContent = data.choices[0].message.content;
         } else {
-            misaBubble.textContent = "System Error: Invalid response from mainframe.";
+            misaBubble.textContent = `Mystery package: ${JSON.stringify(data)}`;
+            console.log("Unknown Server Response", data);
         }
 
         chatWindow.scrollTop = chatWindow.scrollHeight;
