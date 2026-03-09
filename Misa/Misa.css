@@ -21,6 +21,7 @@ body{
     padding-right: 55px;
     box-sizing: border-box;
     flex-shrink: 0;
+    font-size: 16px;
 }
 
 .chat-window{
