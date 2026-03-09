@@ -15,7 +15,7 @@ exports.handler = async function(event, context){
             body: JSON.stringify({
                 model: "gpt-4o-mini",
                 messages: [
-                    { role: "system", content: "You are Misa, a highly advanced sci-fi terminal AI. You give concise, slightly robotic, but helpful answers." },
+                    { role: "system", content: systemPrompt },
                     { role: "user", content: userMessage }
                 ]
             })
