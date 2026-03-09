@@ -3,6 +3,7 @@ const sendBtn = document.getElementById('send-btn');
 const chatWindow = document.getElementById('chat-window');
 const messageInput = document.getElementById('message');
 const messageSound = new Audio('loadingRobot.mp3')
+messageSound.preload = "auto";
 
 // AUTOMATED GREETING
 window.addEventListener('DOMContentLoaded', () =>{
@@ -24,6 +25,10 @@ async function sendMessage(){
     newBubble.classList.add("message","user-message")
     newBubble.textContent = text;
     chatWindow.appendChild(newBubble);
+    messageSound.currentTime = 0;
+            messageSound.play().catch(error =>{
+                console.error("Broswer blocked the audio", error);
+            });
 
     messageInput.value = "";
 
@@ -53,10 +58,6 @@ async function sendMessage(){
         // MISA REPLIES
        if (data.choices && data.choices[0]) {
             misaBubble.textContent = data.choices[0].message.content;
-            messageSound.currentTime = 0;
-            messageSound.play().catch(error =>{
-                console.error("Broswer blocked the audio", error);
-            });
         } else {
             misaBubble.textContent = `Mystery package: ${JSON.stringify(data)}`;
             console.log("Unknown Server Response", data);
