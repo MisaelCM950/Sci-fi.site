@@ -13,7 +13,7 @@ exports.handler = async function(event, context){
                 "Authorization": `Bearer ${API_KEY}`
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo",
+                model: "gpt-4o-mini",
                 messages: [
                     { role: "system", content: "You are Misa, a highly advanced sci-fi terminal AI. You give concise, slightly robotic, but helpful answers." },
                     { role: "user", content: userMessage }
