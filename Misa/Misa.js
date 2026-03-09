@@ -1,5 +1,6 @@
 const sendBtn = document.getElementById('send-btn');
 const chatWindow = document.getElementById('chat-window');
+const messageInput = document.getElementById('message');
 
 async function sendMessage(){
     let text = messageInput.value.trim();
