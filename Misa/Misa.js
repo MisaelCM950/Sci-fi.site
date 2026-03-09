@@ -1,3 +1,10 @@
+
+const sendBtn = document.getElementById('send-btn');
+const chatWindow = document.getElementById('chat-window');
+const messageInput = document.getElementById('message');
+const messageSound = new Audio('loadingRobot.mp3')
+
+// AUTOMATED GREETING
 window.addEventListener('DOMContentLoaded', () =>{
     let greetingBubble = document.createElement("div");
     greetingBubble.classList.add("message", "misa-message");
@@ -5,38 +12,34 @@ window.addEventListener('DOMContentLoaded', () =>{
     chatWindow.appendChild(greetingBubble);
 })
 
-const sendBtn = document.getElementById('send-btn');
-const chatWindow = document.getElementById('chat-window');
-const messageInput = document.getElementById('message');
-const messageSound = new Audio('Loading Robot.mp3')
-
+// CHAT ENGINE
 async function sendMessage(){
     let text = messageInput.value.trim();
 
     if(text === ""){
         return;
     }
-
+    // USER MESSAGE
     let newBubble = document.createElement("div");
-
     newBubble.classList.add("message","user-message")
-
     newBubble.textContent = text;
-
     chatWindow.appendChild(newBubble);
-
+    // SOUND
+    messageSound.currentTime = 0;
     messageSound.play();
 
     messageInput.value = "";
 
     chatWindow.scrollTop = chatWindow.scrollHeight;
 
+    // THINKING ANIMATION
     let misaBubble = document.createElement("div");
     misaBubble.classList.add("message","misa-message");
-    misaBubble.textContent = "Processing network request..."
+    misaBubble.innerHTML= "<div class = 'typing-indicator'><span></span><span></span><span></span></div>";
     chatWindow.appendChild(misaBubble);
     chatWindow.scrollTop = chatWindow.scrollHeight;
 
+    // FETCH RESPONSE
     try{
         const response = await fetch("/.netlify/functions/chat",{
            method: "POST",
@@ -50,9 +53,10 @@ async function sendMessage(){
 
 
         const data = await response.json();
-
+        // MISA REPLIES
        if (data.choices && data.choices[0]) {
             misaBubble.textContent = data.choices[0].message.content;
+            messageSound.currentTime = 0;
             messageSound.play();
         } else {
             misaBubble.textContent = `Mystery package: ${JSON.stringify(data)}`;
@@ -67,6 +71,7 @@ async function sendMessage(){
 
     
 }
+// BUTTON EVENT LISTENER
 sendBtn.addEventListener("click", sendMessage);
 
 messageInput.addEventListener('keypress', function(event){
