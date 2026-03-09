@@ -254,7 +254,6 @@
   }
   .cyber-footer{
     width: 100%;
-    margin-top: -60px;
     padding: 20px 0;
     border-top: 1px solid rgba(0, 243, 255, 0.2);
     display: flex;
@@ -262,8 +261,7 @@
     align-items: center;
     gap: 15px;
 
-    position: absolute;
-    bottom: 0;
+    flex-shrink: 0;
   }
   .footer-links{
     display: flex;
