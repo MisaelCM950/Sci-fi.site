@@ -1,6 +1,14 @@
+window.addEventListener('DOMContentLoaded', () =>{
+    let greetingBubble = document.createElement("div");
+    greetingBubble.classList.add("message", "misa-message");
+    greetingBubble.textContent = "Misa Online. Hi, how can I help you?";
+    chatWindow.appendChild(greetingBubble);
+})
+
 const sendBtn = document.getElementById('send-btn');
 const chatWindow = document.getElementById('chat-window');
 const messageInput = document.getElementById('message');
+const messageSound = new Audio('Loading-Robot.mp3')
 
 async function sendMessage(){
     let text = messageInput.value.trim();
@@ -16,6 +24,8 @@ async function sendMessage(){
     newBubble.textContent = text;
 
     chatWindow.appendChild(newBubble);
+
+    messageSound.play();
 
     messageInput.value = "";
 
@@ -43,6 +53,7 @@ async function sendMessage(){
 
        if (data.choices && data.choices[0]) {
             misaBubble.textContent = data.choices[0].message.content;
+            messageSound.play();
         } else {
             misaBubble.textContent = `Mystery package: ${JSON.stringify(data)}`;
             console.log("Unknown Server Response", data);
