@@ -24,9 +24,6 @@ async function sendMessage(){
     newBubble.classList.add("message","user-message")
     newBubble.textContent = text;
     chatWindow.appendChild(newBubble);
-    // SOUND
-    messageSound.currentTime = 0;
-    messageSound.play();
 
     messageInput.value = "";
 
@@ -57,7 +54,9 @@ async function sendMessage(){
        if (data.choices && data.choices[0]) {
             misaBubble.textContent = data.choices[0].message.content;
             messageSound.currentTime = 0;
-            messageSound.play();
+            messageSound.play().catch(error =>{
+                console.error("Broswer blocked the audio", error);
+            });
         } else {
             misaBubble.textContent = `Mystery package: ${JSON.stringify(data)}`;
             console.log("Unknown Server Response", data);
