@@ -46,6 +46,7 @@
     min-height: 900px;
     padding-bottom: 50px;
     padding-top: 30px;
+  
 
     -webkit-transform: translateZ(0);
     transform:translateZ(0);
@@ -403,6 +404,7 @@
       padding-bottom: 30px;
       margin: 0px auto;
       padding-top: 50px;
+      margin-bottom: 20px;
     }
     .left-column{
       display: contents;
@@ -453,6 +455,7 @@
       order: 2;
       width: 100%;
       gap: 20px;
+      flex-wrap: wrap;
     }
     #password-output{
       font-size:0.85rem !important;
