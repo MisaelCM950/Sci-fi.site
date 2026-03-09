@@ -19,7 +19,7 @@
     background-size: 30px 30px;
     font-family:'Orbitron', sans-serif;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     box-sizing: border-box;
   }
   .calcHome{
@@ -261,6 +261,7 @@
     align-items: center;
     gap: 15px;
 
+    margin-top: auto;
     flex-shrink: 0;
   }
   .footer-links{
@@ -392,7 +393,8 @@
   }
   @media (max-width: 768px){
     body{
-      padding-bottom: 180px;
+      padding-bottom: 10px;
+  
     }
     .calcHome{
       order: 2;
@@ -428,6 +430,7 @@
     .legal-container{
       padding: 20px;
       box-sizing: border-box;
+      margin-bottom: 20px;
     }
     #logo-link{
       order: 1;
@@ -459,6 +462,9 @@
     .custom-tooltip:hover::after{
       opacity: 0;
       visibility: hidden;
+    }
+    .cyber-footer{
+      order: 99;
     }
     
   }
