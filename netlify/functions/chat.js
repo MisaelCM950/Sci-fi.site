@@ -2,7 +2,7 @@ exports.handler = async function(event, context){
     const body = JSON.parse(event.body);
     const userMessage = body.message;
 
-    const API_KEY = ProcessingInstruction.env.OPENAI_API_KEY;
+    const API_KEY = process.env.OPENAI_API_KEY;
 
     try {
     
