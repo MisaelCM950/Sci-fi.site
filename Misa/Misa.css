@@ -101,3 +101,14 @@ body{
     0%, 100% {transform:scale(0.6); opacity: 0.4;}
     50% {transform: scale(1.1); opacity: 1; box-shadow: 0 0 8px rgba(0, 243, 255, 0.8a);}
 }
+  .input-style{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 2px solid var(--neon-blue);
+    outline: none;
+    background: transparent;
+    color: white;
+  }

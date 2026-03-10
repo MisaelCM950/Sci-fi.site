@@ -1,10 +1,10 @@
 exports.handler = async function(event, context){
-    const body = JSON.parse(event.body);
-    const userMessage = body.message;
-
-    const API_KEY = process.env.OPENAI_API_KEY;
+    
 
     try {
+        const body = JSON.parse(event.body);
+        const userMessage = body.message;
+        const API_KEY = process.env.OPENAI_API_KEY;
         const currentDate = new Date().toLocaleDateString('en-US', { 
             weekday: 'long', 
             year: 'numeric', 
