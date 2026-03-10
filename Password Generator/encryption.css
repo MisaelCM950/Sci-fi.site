@@ -132,3 +132,51 @@
     opacity: 1;
     visibility: visible;
   }
+ @media (max-width: 768px){
+    body{
+      padding-bottom: 10px;
+  
+    }
+    .passHome{
+      order: 2;
+      width: 90%;
+      min-height: auto;
+      padding-bottom: 30px;
+      margin: 0px auto;
+      padding-top: 50px;
+      margin-bottom: 20px;
+    }
+    .left-column{
+      display: contents;
+    }
+    .dashboard-layout{
+      gap: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    #logo-link{
+      order: 1;
+      align-self:center;
+      margin-bottom: 10px;
+    }
+    #home-button{
+     
+      width: 120px;
+      margin-top: -10px;
+
+    }
+    #password-output{
+      font-size:0.85rem !important;
+      letter-spacing: 1px !important;
+      padding-right: 70px !important;
+    }
+    .custom-tooltip:hover::after{
+      opacity: 0;
+      visibility: hidden;
+    }
+    .cyber-footer{
+      order: 99;
+    }
+    
+  }
+

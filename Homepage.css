@@ -114,57 +114,11 @@
     width: 100%;
   }
 
-/* Phone Layout for all pages*/
+/* Phone Layout for all*/
   @media (max-width: 768px){
     body{
       padding-bottom: 10px;
   
-    }
-    .calcHome{
-      order: 2;
-      width: 90%;
-      min-height: auto;
-      padding-bottom: 30px;
-      margin: 0px auto;
-      padding-top: 50px;
-      margin-bottom: 20px;
-    }
-    .passHome{
-      order: 2;
-      width: 90%;
-      min-height: auto;
-      padding-bottom: 30px;
-      margin: 0px auto;
-      padding-top: 50px;
-      margin-bottom: 20px;
-    }
-    .left-column{
-      display: contents;
-    }
-    .macro-dashboard{
-      order: 3;
-      margin: 0 auto;
-    }
-    .weight-input{
-      min-width: 100px;
-    }
-    .lbs-select{
-      width: 90%;
-    }
-    .dashboard-layout{
-      gap: 30px;
-      display: flex;
-      flex-direction: column;
-    }
-    .homepage-article{
-      order: 4;
-      max-width: 100%;
-      margin: 20px auto 0px auto;
-    }
-    .legal-container{
-      padding: 20px;
-      box-sizing: border-box;
-      margin-bottom: 20px;
     }
     #logo-link{
       order: 1;
@@ -188,15 +142,6 @@
       width: 100%;
       gap: 20px;
       flex-wrap: wrap;
-    }
-    #password-output{
-      font-size:0.85rem !important;
-      letter-spacing: 1px !important;
-      padding-right: 70px !important;
-    }
-    .custom-tooltip:hover::after{
-      opacity: 0;
-      visibility: hidden;
     }
     .cyber-footer{
       order: 99;
