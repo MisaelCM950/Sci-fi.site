@@ -1,7 +1,7 @@
 const lengthSlider = document.getElementById('password-length');
 const lengthDisplay = document.getElementById('length-display');
 
-lengthSlider.addEventListener("input", function(){
+lengthSlider.addEventListener("input", ()=>{
     lengthDisplay.textContent = lengthSlider.value;
 })
 
