@@ -2,7 +2,7 @@
     const sendBtn = document.getElementById('send-btn');
     const chatWindow = document.getElementById('chat-window');
     const messageInput = document.getElementById('message');
-    const messageSound = new Audio('loadingRobot.mp3')
+    const messageSound = new Audio('/Misa/loadingRobot.mp3')
     messageSound.preload = "auto";
 
 
