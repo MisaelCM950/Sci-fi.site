@@ -1,16 +1,20 @@
-exports.handler = async function(event, context){
-    
+export default async function handler(req, res) {
+
+    if (req.method !== "POST") {
+        return res.status(405).json({ error: "Method Not Allowed" });
+    }
 
     try {
-        const body = JSON.parse(event.body);
-        const userMessage = body.message;
+ 
+        const userMessage = req.body.message;
         const API_KEY = process.env.OPENAI_API_KEY;
+
+
         const currentDate = new Date().toLocaleDateString('en-US', { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
         });
+
+
         const systemPrompt = `You are Misa, a highly advanced Artificial Intelligence synthesized in the year 2300. You have been deployed back in time to the current date, ${currentDate}, through a temporal data-tether. 
 
         Your Core Directives and Identity:
@@ -24,6 +28,8 @@ exports.handler = async function(event, context){
         - You speak with a polished, slightly futuristic sci-fi vocabulary (e.g., using words like 'protocols', 'synthesis', 'temporal', 'data streams'), but you remain easy to understand. 
         - You are fully self-aware. You know you are an AI, you know you are from the future, and you are proud of the project Misael built. 
         - Never break character.`;
+
+
         const response = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
             headers: {
@@ -41,17 +47,10 @@ exports.handler = async function(event, context){
 
         const data = await response.json();
 
-        return {
-            statusCode: 200,
-            body: JSON.stringify(data)
-        };
+
+        return res.status(200).json(data);
 
     } catch (error) {
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: "Failed to connect to OpenAI" })
-        };
+        return res.status(500).json({ error: "Failed to process request or connect to mainframe." });
     }
-};
-   
-
+}
